@@ -1,0 +1,13 @@
+#!/system/bin/sh
+
+echo "* Starting download & import of repository keyring"
+sleep 5
+
+curl -O https://http.kali.org/pool/main/k/kali-archive-keyring/kali-archive-keyring_2018.1_all.deb
+dpkg -i *.deb
+rm -rf *.deb
+
+clear
+echo "# ----------------------------------------------------------"
+echo "# Finished updating repository keys, "apt-get update" next -"
+echo "# ----------------------------------------------------------"
